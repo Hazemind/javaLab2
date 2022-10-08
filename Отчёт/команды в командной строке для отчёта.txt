@@ -1,0 +1,15 @@
+<создание проектов мавен, чайлды автоматически становятся дочерними>
+D:\1JavaLabs\my_lr2\>mvn archetype:generate -DgroupId=ru.rsatu -DartifactId=parent -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+D:\1JavaLabs\my_lr2\parent>mvn archetype:generate -DgroupId=ru.rsatu -DartifactId=child1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+D:\1JavaLabs\my_lr2\parent>mvn archetype:generate -DgroupId=ru.rsatu -DartifactId=child2 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+D:\1JavaLabs\my_lr2\parent>mvn archetype:generate -DgroupId=ru.rsatu -DartifactId=adopted -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+<установка проекта, запаковка, сборка и запуск собранного файла>
+mvn install
+mvn package
+mvn clean compile assembly:single
+java -jar child1/target/child1-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+
+
+
